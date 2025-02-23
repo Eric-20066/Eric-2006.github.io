@@ -1,63 +1,105 @@
-<!DOCTYPE html> <!-- identifica um documento html 5 --> 
-<html lang="pt-br"> <!-- elemento raiz -->
-    <head> <!-- cabeça da página -->
-        <style> body {
-            font-family: Arial, sans-serif; /* Define a fonte do texto */
-            display: flex; /* Usa flexbox para alinhar elementos */
-            justify-content: center; /* Centraliza o conteúdo horizontalmente */
-            align-items: center; /* Centraliza o conteúdo verticalmente */
-            height: 100vh; /* Define a altura da página para ocupar toda a tela */
-            background-color: #191b19; /* Define a cor de fundo */
-        }
-        .container {
-            background: rgb(8, 8, 8); /* Define a cor de fundo do cartão */
-            padding: 30px; /* Adiciona espaçamento interno */
-            border-radius: 50px; /* Arredonda as bordas */
-            box-shadow: 4px 8px black;/* Adiciona uma sombra suave */
-            text-align: center; /* Centraliza o texto dentro do cartão */
-            border: solid 3px black;
-            color: white;
-        }
-        
-        button {
-            background: #007bff; /* Define a cor de fundo do botão */
-            color: white; /* Define a cor do texto do botão */
-            border: solid blue 1px ; /* Remove a borda do botão */
-            padding: 10px 15px; /* Adiciona espaçamento interno */
-            border-radius: 30px; /* Arredonda as bordas do botão */
-            cursor: pointer; /* Muda o cursor para indicar clicabilidade */
-        }
-        button:hover {
-            background: #f10000 ; /* Altera a cor de fundo ao passar o mouse */
-            border: solid #b30000 1px;
-        }
-        
-        .imagem{
-            border-radius: 50%; /* Transforma a imagem em um círculo */
-            width: 150px; /* Define a largura da imagem */
-            height: 150px; /* Define a altura da imagem */
-            margin-bottom: 5px; /* Adiciona espaço abaixo da imagem */
-        }</style>
-        <meta charset="UTF-8"> <!-- sistema de codificação português-->
-        <!-- página terá a largura do dispositivo -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- título da página -->
-        <title>Profile Card </title>
-        <!-- fazendo o html ler o css-->
-        <!-- rel informa tipo da relação, folha de estilo -->
-        <!-- href informa o local do CSS -->
-        <link rel="stylesheet" href="progcomp.css">
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Quiz para programadores</title>
+        <meta name="description" content="Um quiz interativo para testar seus conhecimentos">
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body> <!-- corpo da página -->
-        <div class="container"> <!-- divisão lógica de conteúdo -->
-            <img class="imagem" src="WhatsApp Image 2025-02-22 at 13.59.02.jpeg"/>     
-            <h2> Eric Meleti </h2>
-            <p> Engenharia de Software </p>
-            <a href="https://www.instagram.com/eric_dsm016/">
-                <button> Seguir perfil </button>
-            </a>
-        </div>
-    </body>
+        <body>
+            <header>
+                <h1>Quiz interativo para programadores</h1>
+                <p>Teste seus conhecimentos e veja sua pontuação!</p>
+            </header>
+            <main>
+                <section>
+                    <h2>Sobre esse quiz</h2>
+                    <p><strong>Quiz desenvolvido para testar seus conhecimentos em programção</strong></p>
+                    <p>Você encontara diferentes tipos de perguntas</p>
+                    <p>Desafie-se com esse quiz!</p>
+                </section>
+                <section>
+                    <h2>Pergunta 1: Qual linguagem é utilizada para estruturar paginas web?</h2>
+                    <form > 
+                        <input type="radio" value="Python" name="Pergunta1" id="p1a">
+                        <label for="p1a">Python</label><br>
+                        <input type="radio" value="HTML" name="Pergunta1" id="p1b">
+                        <label for="p1b">HTML</label><br>
+                        <input type="radio" value="CSS" name="Pergunta1" id="p1c">
+                        <label for="p1c">CSS</label><br>
+                        <input type="radio" value="JavaScript" name="Pergunta1" id="p1d">
+                        <label for="p1d">JavaScript</label><br>
+                    </form>
+                </section>
+                <section>
+                    <h2>Pegunta 2: Na URL https://www.google.com o trecho "google.com" é o?</h2>
+                    <form > 
+                        <input type="radio" value="URL" name="Pergunta1" id="p2a">
+                        <label for="p2a">URL</label><br>
+                        <input type="radio" value="Site" name="Pergunta1" id="p2b">
+                        <label for="p2b">Site</label><br>
+                        <input type="radio" value="URI" name="Pergunta1" id="p2c">
+                        <label for="p2c">URI</label><br>
+                        <input type="radio" value="Dominio" name="Pergunta1" id="p2d">
+                        <label for="p2d">Dominio</label><br>
+                    </form>
+                </section>
+                <section>
+                    <h2>Pergunta 3: Em que ano foi lançado o HTML em sua primeira versão?</h2>
+                    <form >
+                        <input type="date" name="pergunta3" id="p3">
+                    </form>
+                    
+                </section>
+                <section>
+                    <h2>Pergunta 4: Quais dessas tecnologias são consideradas linguagens de programação?</h2>
+                    <form>
+                        <input type="checkbox" name="pergunta5" id="p5" value="JavaScript">
+                        <label for="p5a">JavaScript</label><br>
+                        <input type="checkbox" name="pergunta5" id="p5" value="HTML">
+                        <label for="p5a">HTML</label><br>
+                        <input type="checkbox" name="pergunta5" id="p5" value="Java">
+                        <label for="p5a">Java</label><br>
+                        <input type="checkbox" name="pergunta5" id="p5" value="CSS">
+                        <label for="p5a">CSS</label><br>
+                    </form>
+                </section>
+                <section>
+                    <h2>Tabela de pontuação</h2>
+                    <table border="3">
+                        <tr>
+                            <td>0-1</td>
+                            <td>Ruim</td>
+                            <tr>
+                                <td>2</td>
+                                <td>Medio</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Bom</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                            <td>Excelente</td>
+                            </tr>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h2>Respostas</h2>
+                    <details>
+                        <summary>Clique para visualizar as respostas!</summary>
+                    <ul>
+                        <li>HTML</li>
+                        <li>Dominio</li>
+                        <li>1991</li>
+                        <li>Java, JavaScript</li>
+                    </ul>
+                 </details>
+                </section>
+            </main>
+            <footer>
+                <p>&copy Quiz de programação. Todos direitos reservados.</p>
+
+            </footer>
+        </body>
 </html>
-
-
